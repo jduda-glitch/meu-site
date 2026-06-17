@@ -1,1 +1,78 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS (Identidade Visual)
+   ========================================================================== */
+:root {
+    --cor-fundo: #f5f8f6;
+    --cor-texto: #2c3e50;
+    --cor-primaria-campo: #1b854a; /* Verde elegante para a base do campo */
+    --cor-urbana-choque: #ff007f; /* Rosa-choque vibrante para a conexão urbana */
+    --cor-card-fundo: #ffffff;
+    --cor-header-fundo: #ffffff;
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+/* Variáveis para o Modo Escuro (Acessibilidade) */
+body.modo-escuro {
+    --cor-fundo: #121212;
+    --cor-texto: #e0e0e0;
+    --cor-card-fundo: #1e1e1e;
+    --cor-header-fundo: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO (HEADER) E NAVEGAÇÃO
+   ========================================================================== */
+header {
+    background-color: var(--cor-header-fundo);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--cor-primaria-campo);
+}
+
+/* Botões de Acessibilidade */
+.acessibilidade button {
+    background: #e0e0e0;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.acessibilidade button:hover {
+    background: #bdc3c7;
+}
+
+/*
