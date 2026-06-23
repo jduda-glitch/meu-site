@@ -1,17 +1,14 @@
-/* ==========================================================================
-   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS (Identidade Visual)
-   ========================================================================== */
 :root {
     --cor-fundo: #f5f8f6;
     --cor-texto: #2c3e50;
-    --cor-primaria-campo: #1b854a; /* Verde elegante para a base do campo */
-    --cor-urbana-choque: #ff007f; /* Rosa-choque vibrante para a conexão urbana */
+    --cor-primaria-campo: #1b854a; /* Verde */
+    --cor-urbana-choque: #ff007f; /* Rosa-choque */
     --cor-card-fundo: #ffffff;
     --cor-header-fundo: #ffffff;
     --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Variáveis para o Modo Escuro (Acessibilidade) */
+/* Transições suaves para o Modo Escuro */
 body.modo-escuro {
     --cor-fundo: #121212;
     --cor-texto: #e0e0e0;
@@ -33,9 +30,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* ==========================================================================
-   2. CABEÇALHO (HEADER) E NAVEGAÇÃO
-   ========================================================================== */
+/* Cabeçalho */
 header {
     background-color: var(--cor-header-fundo);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -59,7 +54,7 @@ header h1 {
     color: var(--cor-primaria-campo);
 }
 
-/* Botões de Acessibilidade */
+/* Acessibilidade */
 .acessibilidade button {
     background: #e0e0e0;
     border: none;
@@ -68,11 +63,103 @@ header h1 {
     cursor: pointer;
     border-radius: 4px;
     font-weight: bold;
-    transition: background 0.2s;
 }
 
-.acessibilidade button:hover {
-    background: #bdc3c7;
+/* Menu */
+nav {
+    background-color: var(--cor-primaria-campo);
 }
 
-/*
+nav ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background-color: var(--cor-urbana-choque);
+}
+
+/* Layout */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--cor-card-fundo);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#introducao {
+    text-align: center;
+    border-bottom: 5px solid var(--cor-urbana-choque);
+}
+
+.cards-section h2 {
+    margin-bottom: 20px;
+    border-left: 5px solid var(--cor-primaria-campo);
+    padding-left: 10px;
+}
+
+#cidade h2 {
+    border-left-color: var(--cor-urbana-choque);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--cor-fundo);
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 4px solid var(--cor-primaria-campo);
+}
+
+#cidade .card {
+    border-top-color: var(--cor-urbana-choque);
+}
+
+/* Painel Interativo */
+.painel-interativo {
+    border: 2px dashed var(--cor-urbana-choque);
+    text-align: center;
+}
+
+.botoes-simulador button {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: var(--cor-urbana-choque);
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.botoes-simulador button:hover {
+    transform: scale(1.05);
+}
+
+/* Resultado */
+#resultado-jornada {
+    margin-top: 20px;
+    padding:
