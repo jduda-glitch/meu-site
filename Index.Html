@@ -3,90 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conexão Campo-Cidade | Agrinho 2026</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header>
-        <div class="header-container">
-            <h1>Festejando a Conexão Campo-Cidade</h1>
+    <title>Conexão Campo-Cidade | Concurso Agrinho 2026</title>
+    
+    <style>
+        /* ==========================================================================
+           1. VARIÁVEIS DE AMBIENTE E DESIGN SYSTEM (Verde & Rosa-Choque)
+           ========================================================================== */
+        :root {
+            --bg-principal: #f4f7f5;
+            --bg-card: #ffffff;
+            --texto-principal: #2c3e50;
+            --texto-secundario: #546e7a;
             
-            <div class="acessibilidade">
-                <button id="btn-contraste" aria-label="Alternar modo escuro">🌓 Modo Escuro</button>
-                <button id="btn-aumentar" aria-label="Aumentar texto">A+</button>
-                <button id="btn-diminuir" aria-label="Diminuir texto">A-</button>
-            </div>
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#introducao">A Conexão</a></li>
-                <li><a href="#campo">O Campo</a></li>
-                <li><a href="#cidade">A Cidade</a></li>
-                <li><a href="#simulador">Descubra a Origem</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-
-        <section id="introducao">
-            <h2>Como campo e cidade dependem um do outro?</h2>
-            <p>O campo e a cidade não estão isolados; eles vivem em uma parceria constante. Enquanto o campo alimenta e fornece matéria-prima, a cidade desenvolve tecnologias e serviços que impulsionam a produção rural.</p>
-        </section>
-
-        <section id="campo" class="cards-section">
-            <h2>O que o Campo fornece para a Cidade?</h2>
-            <div class="grid-container">
-                <article class="card">
-                    <h3>Alimentação Sustentável</h3>
-                    <p>Frutas, verduras, grãos e laticínios que abastecem as mesas das famílias nos centros urbanos todos os dias.</p>
-                </article>
-                <article class="card">
-                    <h3>Matéria-Prima</h3>
-                    <p>O algodão para as indústrias têxteis, a madeira para a construção e os recursos naturais essenciais para a produção de bens.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="cidade" class="cards-section">
-            <h2>O que a Cidade devolve para o Campo?</h2>
-            <div class="grid-container">
-                <article class="card">
-                    <h3>Tecnologia e Inovação</h3>
-                    <p>Desenvolvimento de maquinários agrícolas (tratores, colheitadeiras), drones de monitoramento e softwares de gestão.</p>
-                </article>
-                <article class="card">
-                    <h3>Ciência e Pesquisa</h3>
-                    <p>Estudos biológicos para melhoria de sementes, desenvolvimento de adubos ecológicos e técnicas de manejo sustentável do solo.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="simulador" class="painel-interativo">
-            <h2>Calculadora de Dependência: O Caminho do Alimento</h2>
-            <p>Escolha um item do seu café da manhã para descobrir como ele conecta você ao campo:</p>
+            /* Identidade Visual Solicitada */
+            --cor-campo-verde: #1b854a;
+            --cor-cidade-rosa: #ff007f;
+            --cor-rosa-hover: #d8006b;
+            --cor-alerta-bg: #fff0f5;
             
-            <div class="botoes-simulador">
-                <button onclick="descobrirOrigem('cafe')">☕ Tomar Café</button>
-                <button onclick="descobrirOrigem('pao')">🍞 Comer Pão</button>
-                <button onclick="descobrirOrigem('leite')">🥛 Beber Leite</button>
-            </div>
+            --fonte-familia: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            --transicao-suave: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --sombra-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
 
-            <div id="resultado-jornada" class="resultado-oculto">
-                <p id="texto-resultado">Clique em um dos botões acima para ver a mágica do JavaScript acontecer!</p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>Projeto Autoral desenvolvido para o Concurso Agrinho 2026</p>
-        <p>Desenvolvedor(a): <strong>Seu Nome Completo</strong></p>
-        <p><a href="https://github.com/seu-usuario" target="_blank">Visite meu repositório no GitHub</a></p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        /* Variáveis do Modo Escuro (Alto Contraste / Acessibilidade) */
+        body.modo-escuro {
+            --bg-principal: #121212;
+            --bg-card: #1e1e1e;
+            --texto-principal: #f5f6f7;
+            --texto-secundario: #b0bec5;
+            --cor-campo-verde: #2ecc71; /* Verde mais claro para contraste no escuro */
+            --cor-cidade-rosa: #ff409f;  /* Rosa mais visível no escuro */
+            --
